@@ -10,15 +10,12 @@ public class IT24103570Lab5Q3 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-        // Input start and end dates
         System.out.print("Enter the start date (1-31): ");
         int startDate = input.nextInt();
 
         System.out.print("Enter the end date (1-31): ");
         int endDate = input.nextInt();
 
-        // Validate input dates
         if (startDate < 1 || startDate > MONTH_DAYS || endDate < 1 || endDate > MONTH_DAYS) {
             System.out.println("Error: Dates must be between 1 and 31.");
             return;
@@ -29,10 +26,8 @@ public class IT24103570Lab5Q3 {
             return;
         }
 
-        // Calculate days reserved
         int daysReserved = endDate - startDate;
 
-        // Determine discount rate
         int discountRate;
         if (daysReserved < 3) {
             discountRate = NO_DISCOUNT;
